@@ -11,10 +11,18 @@
      { 
      if (document.getElementById("userid").value == ""){
 	   alert ( "Please enter Userid." );
+	   if(event.preventDefault)
+		    event.preventDefault();
+		else
+		    event.returnValue = false;
 	   return false;
 	   }
 	   if (document.getElementById("password").value == ""){
 	   alert ( "Please enter password." );
+	   if(event.preventDefault)
+		    event.preventDefault();
+		else
+		    event.returnValue = false;
 	   return false;
 	   }
      }

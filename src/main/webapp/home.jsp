@@ -12,7 +12,7 @@
                 </td>
                 <td><a href="register">Register</a>
                 </td>
-                <td><a href="change password">Change Password</a>
+                <td><a href="change">Change Password</a>
                 </td>
                 <td><a href="view">View employees</a>
                 </td>

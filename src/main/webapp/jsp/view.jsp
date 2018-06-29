@@ -7,6 +7,27 @@
             <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
             <title>Login</title>
         </head>
+             <script>
+        function alertMessage()
+     { 
+     if (document.getElementById("userid").value == ""){
+	   alert ( "Please enter Userid." );
+	   if(event.preventDefault)
+		    event.preventDefault();
+		else
+		    event.returnValue = false;
+	   return false;
+	   }
+	   if (document.getElementById("password").value == ""){
+	   alert ( "Please enter password." );
+	   if(event.preventDefault)
+		    event.preventDefault();
+		else
+		    event.returnValue = false;
+	   return false;
+	   }
+     }
+	   </script>
         <body>
             <form:form id="ViewForm" modelAttribute="view" action="viewProcess" method="post">
                 <table align="center">
@@ -29,7 +50,7 @@
                     <tr>
                         <td></td>
                         <td align="left">
-                            <form:button id="login" name="login">Login</form:button>
+                            <form:button id="login" name="login" onClick="alertMessage()">View Employees</form:button>
                         </td>
                     </tr>
                     <tr></tr>
@@ -42,15 +63,13 @@
             </form:form>
             <table align="center">
                 <tr>
-                    <td style="font-style: italic; color: red;">${message}</td>
+                    <td>${message}</td>
                 </tr>
             </table>
    <script language="javascript" type="text/javascript">
 <c:if test="${not empty lists}">
     <c:forEach items="${lists}" var="lists">
-    document.write("<tr>");
-      document.write("<td>"+ "${lists.printme()}"+"</td>");
-      document.write("</tr>");
+      document.write("<br>"+ "${lists.printme()}"+"<br>");
 </c:forEach>
 
 </c:if>

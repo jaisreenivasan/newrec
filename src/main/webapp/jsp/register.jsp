@@ -5,6 +5,68 @@
             <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
             <title>Registration</title>
         </head>
+             <script>
+        function alertMessage()
+     { 
+     if (document.getElementById("userid").value == ""){
+	   alert ( "Please enter Userid." );
+	   if(event.preventDefault)
+		    event.preventDefault();
+		else
+		    event.returnValue = false;
+	   return false;
+	   }
+	   if (document.getElementById("password").value == ""){
+	   alert ( "Please enter password." );
+	   if(event.preventDefault)
+		    event.preventDefault();
+		else
+		    event.returnValue = false;
+	   return false;
+	   }
+	   if (document.getElementById("firstname").value == ""){
+		   alert ( "Please enter firstname." );
+		   if(event.preventDefault)
+			    event.preventDefault();
+			else
+			    event.returnValue = false;
+		   return false;
+		   }
+	   if (document.getElementById("lastname").value == ""){
+		   alert ( "Please enter lastname." );
+		   if(event.preventDefault)
+			    event.preventDefault();
+			else
+			    event.returnValue = false;
+		   return false;
+		   }
+	   if (document.getElementById("desig").value == ""){
+		   alert ( "Please enter designation." );
+		   if(event.preventDefault)
+			    event.preventDefault();
+			else
+			    event.returnValue = false;
+		   return false;
+		   }
+	   if (document.getElementById("email").value == ""){
+		   alert ( "Please enter email." );
+		   if(event.preventDefault)
+			    event.preventDefault();
+			else
+			    event.returnValue = false;
+		   return false;
+		   }
+	   if (document.getElementById("phone").value == ""){
+		   alert ( "Please enter phone." );
+		   if(event.preventDefault)
+			    event.preventDefault();
+			else
+			    event.returnValue = false;
+		   return false;
+		   }
+	   
+     }
+	   </script>
         <body>
             <form:form id="regForm" modelAttribute="user" action="registerProcess" method="post">
                 <table align="center">
@@ -67,7 +129,7 @@
                     <tr>
                         <td></td>
                         <td>
-                            <form:button id="register" name="register">Register</form:button>
+                            <form:button id="register" name="register" onClick="alertMessage()">Register</form:button>
                         </td>
                     </tr>
                     <tr></tr>
