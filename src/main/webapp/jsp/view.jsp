@@ -66,15 +66,11 @@
                     <td>${message}</td>
                 </tr>
             </table>
-            <
+            
    <script language="javascript" type="text/javascript">
 <c:if test="${not empty lists}">
     <c:forEach items="${lists}" var="lists">
-    table align="center">
-    <tr>
       document.write("<br>"+ "${lists.printme()}"+"<br>");
-      </tr>
-      </table>
 </c:forEach>
 
 </c:if>
