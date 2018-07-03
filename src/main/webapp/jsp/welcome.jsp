@@ -5,20 +5,30 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <title>Welcome</title>
+        <style>p.indent{ padding-left: 4.5em }</style>
     </head>
-    <body>
-        <table>
+     <style>
+	   div {
+    width: 300px;
+    border: 1px solid green;
+    padding: 25px;
+    margin-left: 250px;
+}
+</style>
+    <body><div>
+        <table align="center">
             <tr>
-                <td>Welcome ${firstname}</td>
+                <td><font size="10px">Welcome ${firstname}</font></td>
             </tr>
             <tr>
             </tr>
             <tr>
             </tr>
             <tr>
-                <td><a href="home.jsp">Home</a>
+                <td><p class="indent"><a href="home.jsp">Home</a></p>
                 </td>
             </tr>
         </table>
+        </div>
     </body>
     </html>

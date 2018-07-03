@@ -27,7 +27,16 @@
 	   }
      }
 </script>
+<style>
+div {
+    width: 300px;
+    border: 1px solid green;
+    padding: 25px;
+    margin-left: 250px;
+}
+</style>
 <body>
+<div>
 <form:form id="loginForm" modelAttribute="login"  action="loginProcess" method="post">
 <table align="center">
 <tr>
@@ -58,12 +67,16 @@
 <td><a href="home.jsp">Home</a>
    </td>
    </tr>
+   
  </table>
  </form:form>
+ </div>
  <table align="center">
  <tr>
  <td style="font-style: italic; color: red;">${message}</td>
  </tr>
+ 
  </table>
+
  </body>
  </html>

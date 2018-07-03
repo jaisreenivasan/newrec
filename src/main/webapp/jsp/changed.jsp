@@ -6,7 +6,16 @@
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <title>Change</title>
     </head>
+      <style>
+	   div {
+    width: 300px;
+    border: 1px solid green;
+    padding: 25px;
+    margin-left: 250px;
+}
+</style>
     <body>
+    <div>
         <table>
             <tr>
                 <td>password changed sucessfully ${firstname}</td>
@@ -20,5 +29,6 @@
                 </td>
             </tr>
         </table>
+        </div>
     </body>
     </html>

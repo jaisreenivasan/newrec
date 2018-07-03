@@ -67,7 +67,16 @@
 	   
      }
 	   </script>
+	   <style>
+div {
+    width: 300px;
+    border: 1px solid green;
+    padding: 25px;
+    margin-left: 250px;
+}
+</style>
         <body>
+        <div>
             <form:form id="regForm" modelAttribute="user" action="registerProcess" method="post">
                 <table align="center">
                     <tr>
@@ -107,12 +116,12 @@
                             <form:label path="email">Email</form:label>
                         </td>
                         <td>
-                            <form:input path="email" name="email" id="email" />
+                            <form:input type="email" path="email" name="email" id="email" />
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <form:label path="desig">Desig</form:label>
+                            <form:label path="desig">Designation</form:label>
                         </td>
                         <td>
                             <form:input path="desig" name="desig" id="desig" />
@@ -120,10 +129,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <form:label path="phone">Phone</form:label>
+                            <form:label  path="phone">Phone</form:label>
                         </td>
                         <td>
-                            <form:input path="phone" name="phone" id="phone" />
+                            <form:input type="number" min="9000000000" max="9999999999" path="phone" name="phone" id="phone" />
                         </td>
                     </tr>
                     <tr>
@@ -140,5 +149,11 @@
                     </tr>
                 </table>
             </form:form>
+            </div>
+            <table align="center">
+ <tr>
+ <td style="font-style: italic; color: red;">${message}</td>
+ </tr>
+ </table>
         </body>
         </html>

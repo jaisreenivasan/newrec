@@ -15,6 +15,7 @@
         <servlet.version>3.1.0</servlet.version>
         <servlet.version>3.0.1</servlet.version>
         <mysql.connector.version>5.1.36</mysql.connector.version>
+        <jackson.library>2.7.5</jackson.library>
     </properties>
     <dependencies>
        
@@ -86,6 +87,23 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.connector.version}</version>
         </dependency>
+        <!-- implicit conversion between JSON and POJO classes-->
+    		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>1.8</version>
+		</dependency>
+		<dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.7.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.7.3</version>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>Login</finalName>

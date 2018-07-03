@@ -37,7 +37,7 @@
 }
 </style>
         <body>
-            <form:form id="ViewForm" modelAttribute="view" action="viewProcess" method="post">
+            <form:form id="ViewForm" modelAttribute="viewMe" action="viewMeProcess" method="post">
             <div>
                 <table align="center">
                     <tr>
@@ -77,14 +77,6 @@
                 </tr>
             </table>
             
-   <script language="javascript" type="text/javascript">
-<c:if test="${not empty lists}">
-    <c:forEach items="${lists}" var="lists">
-      document.write("<br>"+ "${lists.printme()}"+"<br>");
-</c:forEach>
-
-</c:if>
-</script>
 
 </body>
 </html>

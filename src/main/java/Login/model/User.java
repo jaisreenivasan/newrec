@@ -9,10 +9,10 @@ public class User extends UserDaoImpl{
 	  private String lastname;
 	  private String email;
 	  private String desig;
-	  private int phone;
+	  private String phone;
 	  public String printme()
 	    {String sing;
-	    sing="* "+"FirstName:"+this.getFirstname()+" LastName:"+this.getLastname()+" Phone:"+this.getPhone()+" Designation:"+this.getDesig()+" Email:"+this.getEmail();
+	    sing="* "+"FirstName:"+this.getFirstname()+" |LastName:"+this.getLastname()+" |Phone:"+this.getPhone()+" |Designation:"+this.getDesig()+" |Email:"+this.getEmail();
 	    return sing;
 	    }
 	  public String getUserid() {
@@ -51,10 +51,10 @@ public class User extends UserDaoImpl{
 	  public void setDesig(String desig) {
 	  this.desig = desig;
 	  }
-	  public int getPhone() {
+	  public String getPhone() {
 	  return phone;
 	  }
-	  public void setPhone(int phone) {
+	  public void setPhone(String phone) {
 	  this.phone = phone;
 	  }
 	}

@@ -26,6 +26,18 @@
 		    event.returnValue = false;
 	   return false;
 	   }
+	   var txt;
+	   var r = confirm("Do You really wish to delete user details");
+	   if (r == true) {
+		   return true;
+	       
+	   } else {
+		   if(event.preventDefault)
+			    event.preventDefault();
+			else
+			    event.returnValue = false;
+		   return false;
+	   }
      }
 	   </script>
 	   <style>
@@ -37,8 +49,8 @@
 }
 </style>
         <body>
-            <form:form id="ViewForm" modelAttribute="view" action="viewProcess" method="post">
-            <div>
+        <div>
+            <form:form id="DeleteForm" modelAttribute="delete" action="deleteprocess" method="post">
                 <table align="center">
                     <tr>
                         <td>
@@ -59,7 +71,7 @@
                     <tr>
                         <td></td>
                         <td align="left">
-                            <form:button id="login" name="login" onClick="alertMessage()">View Employees</form:button>
+                            <form:button id="delete" name="delete" onClick="alertMessage()">Delete</form:button>
                         </td>
                     </tr>
                     <tr></tr>
@@ -69,22 +81,12 @@
                         </td>
                     </tr>
                 </table>
-                </div>
             </form:form>
             <table align="center">
                 <tr>
-                    <td>${message}</td>
+                    <td><font color="red">${message}</font></td>
                 </tr>
             </table>
-            
-   <script language="javascript" type="text/javascript">
-<c:if test="${not empty lists}">
-    <c:forEach items="${lists}" var="lists">
-      document.write("<br>"+ "${lists.printme()}"+"<br>");
-</c:forEach>
-
-</c:if>
-</script>
-
+</div>
 </body>
 </html>
