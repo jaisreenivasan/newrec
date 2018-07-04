@@ -20,7 +20,7 @@ public class UserDaoImpl implements UserDao{
   public boolean register(User user) {
 	  String sql="DROP TABLE MYDB.users;";
 	  jdbcTemplate.execute(sql);
-			  sql="CREATE SCHEMA IF NOT EXISTS MYDB;"+"CREATE TABLE IF NOT EXISTS MYDB.users ( userid  VARCHAR(45) NOT NULL, password  VARCHAR(45) NULL,firstname VARCHAR(45) NOT NULL,lastname  VARCHAR(45) NULL,  email     VARCHAR(45) NULL,  desig  VARCHAR(45) NULL,  phone     varchar(10) NULL,PRIMARY KEY (userid));";
+			 /* sql="CREATE SCHEMA IF NOT EXISTS MYDB;"+"CREATE TABLE IF NOT EXISTS MYDB.users ( userid  VARCHAR(45) NOT NULL, password  VARCHAR(45) NULL,firstname VARCHAR(45) NOT NULL,lastname  VARCHAR(45) NULL,  email     VARCHAR(45) NULL,  desig  VARCHAR(45) NULL,  phone     varchar(10) NULL,PRIMARY KEY (userid));";
 	    jdbcTemplate.execute(sql);
     sql = "select * from  MYDB.users where userid='" + user.getUserid() + "' and password='" + user.getPassword()
     + "'";
@@ -35,7 +35,7 @@ public class UserDaoImpl implements UserDao{
   public boolean deleteUser(Login login) {
 	 String sql = "delete  from  MYDB.users where userid='" + login.getUserid() + "' and password='" + login.getPassword()
     + "'";
-    jdbcTemplate.update(sql);
+    jdbcTemplate.update(sql);*/
     return true;
     }
     public User validateUser(Login login) {
