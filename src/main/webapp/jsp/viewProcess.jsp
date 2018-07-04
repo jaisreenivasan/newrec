@@ -37,47 +37,24 @@
 }
 </style>
         <body>
-            <form:form id="ViewForm" modelAttribute="view" action="viewProcess" method="post">
-            <div>
+        <TABLE border="1" align="center">
+<COLGROUP>
+<COL><COL align="char" char=".">
+<THEAD>
+<TR><TH>FirstName <TH>LastName <TH>Phone <TH>Designation <TH>Email
+<TBODY>
+<c:forEach items="${lists}" var="lists">
+<TR><TD>${lists.getFirstname()}<TD>${lists.getLastname()}<TD>${lists.getDesig()}<TD>${lists.getPhone()}<TD>${lists.getEmail()}
+</c:forEach>
+</TABLE>
+            <form:form id="ViewProcessForm" modelAttribute="viewProcess">
                 <table align="center">
-                    <tr>
-                        <td>
-                            <form:label path="userid">Userid: </form:label>
-                        </td>
-                        <td>
-                            <form:input path="userid" name="userid" id="userid" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <form:label path="password">Password:</form:label>
-                        </td>
-                        <td>
-                            <form:password path="password" name="password" id="password" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td align="left">
-                            <form:button id="login" name="login" onClick="alertMessage()">View Employees</form:button>
-                        </td>
-                    </tr>
-                    <tr></tr>
                     <tr>
                         <td></td>
                         <td><a href="home.jsp">Home</a>
                         </td>
                     </tr>
                 </table>
-                </div>
-            </form:form>
-            <table align="center">
-                <tr>
-                    <td>${message}</td>
-                </tr>
-            </table>
-            
-  
-
+                </form:form>
 </body>
 </html>

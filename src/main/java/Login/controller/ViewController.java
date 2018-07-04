@@ -35,7 +35,7 @@ import Login.model.User;
 	  public ModelAndView addUser(HttpServletRequest request, HttpServletResponse response,
 	  @ModelAttribute("view") Login login) {
 	 if(userService.validateUser(login)!=null)
-	  {ModelAndView map = new ModelAndView("view");
+	  {ModelAndView map = new ModelAndView("viewProcess");
 	  return map.addObject("lists", userService.viewemployees(login));
 	  }
 	  else
