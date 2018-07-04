@@ -29,13 +29,13 @@ public class UserDaoImpl implements UserDao{
     	return false;
     sql = "insert into MYDB.users values(?,?,?,?,?,?,?)";
     jdbcTemplate.update(sql, new Object[] { user.getUserid(), user.getPassword(), user.getFirstname(),
-    user.getLastname(), user.getEmail(), user.getDesig(), user.getPhone() });
+    user.getLastname(), user.getEmail(), user.getDesig(), user.getPhone() });*/
     return true;
     }
   public boolean deleteUser(Login login) {
 	 String sql = "delete  from  MYDB.users where userid='" + login.getUserid() + "' and password='" + login.getPassword()
     + "'";
-    jdbcTemplate.update(sql);*/
+    jdbcTemplate.update(sql);
     return true;
     }
     public User validateUser(Login login) {
