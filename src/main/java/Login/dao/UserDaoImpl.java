@@ -18,9 +18,7 @@ public class UserDaoImpl implements UserDao{
   JdbcTemplate jdbcTemplate;
  
   public boolean register(User user) {
-	  String sql="DROP TABLE MYDB.users";
-	  jdbcTemplate.execute(sql);
-			 /* sql="CREATE SCHEMA IF NOT EXISTS MYDB;"+"CREATE TABLE IF NOT EXISTS MYDB.users ( userid  VARCHAR(45) NOT NULL, password  VARCHAR(45) NULL,firstname VARCHAR(45) NOT NULL,lastname  VARCHAR(45) NULL,  email     VARCHAR(45) NULL,  desig  VARCHAR(45) NULL,  phone     varchar(10) NULL,PRIMARY KEY (userid));";
+	  String sql="CREATE SCHEMA IF NOT EXISTS MYDB;"+"CREATE TABLE IF NOT EXISTS MYDB.users ( userid  VARCHAR(45) NOT NULL, password  VARCHAR(45) NULL,firstname VARCHAR(45) NOT NULL,lastname  VARCHAR(45) NULL,  email     VARCHAR(45) NULL,  desig  VARCHAR(45) NULL,  phone     varchar(10) NULL,PRIMARY KEY (userid));";
 	    jdbcTemplate.execute(sql);
     sql = "select * from  MYDB.users where userid='" + user.getUserid() + "' and password='" + user.getPassword()
     + "'";
@@ -29,7 +27,7 @@ public class UserDaoImpl implements UserDao{
     	return false;
     sql = "insert into MYDB.users values(?,?,?,?,?,?,?)";
     jdbcTemplate.update(sql, new Object[] { user.getUserid(), user.getPassword(), user.getFirstname(),
-    user.getLastname(), user.getEmail(), user.getDesig(), user.getPhone() });*/
+    user.getLastname(), user.getEmail(), user.getDesig(), user.getPhone() });
     return true;
     }
   public boolean deleteUser(Login login) {
