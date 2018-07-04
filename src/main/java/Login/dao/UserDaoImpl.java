@@ -18,7 +18,7 @@ public class UserDaoImpl implements UserDao{
   JdbcTemplate jdbcTemplate;
  
   public boolean register(User user) {
-	  String sql="DROP TABLE MYDB.users;";
+	  String sql="DROP TABLE MYDB.users";
 	  jdbcTemplate.execute(sql);
 			 /* sql="CREATE SCHEMA IF NOT EXISTS MYDB;"+"CREATE TABLE IF NOT EXISTS MYDB.users ( userid  VARCHAR(45) NOT NULL, password  VARCHAR(45) NULL,firstname VARCHAR(45) NOT NULL,lastname  VARCHAR(45) NULL,  email     VARCHAR(45) NULL,  desig  VARCHAR(45) NULL,  phone     varchar(10) NULL,PRIMARY KEY (userid));";
 	    jdbcTemplate.execute(sql);
