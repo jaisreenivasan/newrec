@@ -5,7 +5,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <title>Welcome</title>
-        <style>p.indent{ padding-left: 4.5em }</style>
+        <style>p.indent{ padding-left: 1em }</style>
     </head>
      <style>
 	   div {
@@ -18,7 +18,7 @@
     <body><div>
         <table align="center">
             <tr>
-                <td><font size="10px">Welcome ${firstname}</font></td>
+                <td><font size="5px">Welcome ${firstname}</font></td>
             </tr>
             <tr>
             </tr>
