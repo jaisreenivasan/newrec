@@ -66,10 +66,18 @@
 		   }
 	   
      }
+        function myFunction() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
 	   </script>
 	   <style>
 div {
-    width: 300px;
+    width: 320px;
     border: 1px solid green;
     padding: 25px;
     margin-left: 250px;
@@ -93,6 +101,7 @@ div {
                         </td>
                         <td>
                             <form:password path="password" name="password" id="password" />
+                            <input type="checkbox" onclick="myFunction()"><font size="1px">ShowPassword</font>
                         </td>
                     </tr>
                     <tr>
@@ -132,7 +141,8 @@ div {
                             <form:label  path="phone">Phone</form:label>
                         </td>
                         <td>
-                            <form:input type="number" min="9000000000" max="9999999999" path="phone" name="phone" id="phone" />
+                            <form:input path="phone" name="phone" id="phone" pattern="[0-9]{10}" title="phone no must have 10 digits"/>
+                            
                         </td>
                     </tr>
                     <tr>
