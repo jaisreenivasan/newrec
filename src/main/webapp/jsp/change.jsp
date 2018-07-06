@@ -45,7 +45,7 @@
 	   </script>
 	   <style>
 	   div {
-    width: 300px;
+    width: 350px;
     border: 1px solid green;
     padding: 25px;
     margin-left: 250px;
