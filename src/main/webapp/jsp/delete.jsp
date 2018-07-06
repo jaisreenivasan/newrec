@@ -38,6 +38,13 @@
 			    event.returnValue = false;
 		   return false;
 	   }
+     }function myFunction() {
+         var x = document.getElementById("password");
+         if (x.type === "password") {
+             x.type = "text";
+         } else {
+             x.type = "password";
+         }
      }
 	   </script>
 	   <style>
@@ -66,6 +73,7 @@
                         </td>
                         <td>
                             <form:password path="password" name="password" id="password" />
+                            <input type="checkbox" onclick="myFunction()"><font size="1px">ShowPassword</font>
                         </td>
                     </tr>
                     <tr>

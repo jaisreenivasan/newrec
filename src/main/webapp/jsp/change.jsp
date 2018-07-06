@@ -26,6 +26,22 @@
 	   return false;
 	   }
      }
+        function myFunction() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+        function myFunction() {
+            var x = document.getElementById("newPassword");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
 	   </script>
 	   <style>
 	   div {
@@ -53,11 +69,13 @@
                         </td>
                         <td>
                             <form:password path="password" name="password" id="password" />
+                            <input type="checkbox" onclick="myFunction()"><font size="1px">ShowPassword</font>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <form:label path="newPassword">NewPassword:</form:label>
+                            <input type="checkbox" onclick="myFunction1()"><font size="1px">ShowPassword</font>
                         </td>
                         <td>
                             <form:password path="newPassword" name="newPassword" id="newPassword" />
