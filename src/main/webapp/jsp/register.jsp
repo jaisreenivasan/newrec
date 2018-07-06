@@ -77,7 +77,7 @@
 	   </script>
 	   <style>
 div {
-   width:100%; margin:0 auto; 
+    width: 350px;
     border: 1px solid green;
     padding: 25px;
     margin-left: 250px;
