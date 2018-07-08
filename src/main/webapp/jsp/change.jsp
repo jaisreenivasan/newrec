@@ -60,7 +60,7 @@
                             <form:label path="userid">Userid: </form:label>
                         </td>
                         <td>
-                            <form:input path="userid" name="userid" id="userid" />
+                            <form:input path="userid" name="userid" id="userid" pattern=".{1,40}" title="invalid userid size"/>
                         </td>
                     </tr>
                     <tr>
@@ -68,7 +68,7 @@
                             <form:label path="password">Password:</form:label>
                         </td>
                         <td>
-                            <form:password path="password" name="password" id="password" />
+                            <form:password path="password" name="password" id="password" pattern=".{1,40}" title="invalid password size" />
                             <input type="checkbox" onclick="myFunction()"><font size="1px">ShowPassword</font>
                         </td>
                     </tr>
@@ -78,7 +78,7 @@
                             <input type="checkbox" onclick="myFunction1()"><font size="1px">ShowPassword</font>
                         </td>
                         <td>
-                            <form:password path="newPassword" name="newPassword" id="newPassword" />
+                            <form:password path="newPassword" name="newPassword" id="newPassword"  pattern=".{,40}"  title="password mustnot exceed 40 characters"/>
                         </td>
                     </tr>
                    

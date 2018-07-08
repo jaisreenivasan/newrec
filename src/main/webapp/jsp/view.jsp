@@ -38,7 +38,7 @@
 	   </script>
 	   <style>
 	   div {
-    width: 350px;
+    width: 400px;
     border: 1px solid green;
     padding: 25px;
     margin-left: 250px;
@@ -53,7 +53,7 @@
                             <form:label path="userid">Userid: </form:label>
                         </td>
                         <td>
-                            <form:input path="userid" name="userid" id="userid" />
+                            <form:input path="userid" name="userid" id="userid" pattern=".{1,40}" title="userid willnot exceed 40 characters"/>
                         </td>
                     </tr>
                     <tr>
@@ -61,13 +61,13 @@
                             <form:label path="password">Password:</form:label>
                         </td>
                         <td>
-                            <form:password path="password" name="password" id="password" />
+                            <form:password path="password" name="password" id="password" pattern=".{1,40}" title="password willnot exceed 40 characters"/>
                             <input type="checkbox" onclick="myFunction()"><font size="1px">ShowPassword</font>
                         </td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td align="left">
+                        <td >
                             <form:button id="login" name="login" onClick="alertMessage()">View Employees</form:button>
                         </td>
                     </tr>

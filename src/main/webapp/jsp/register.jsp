@@ -92,7 +92,7 @@ div {
                             <form:label path="userid">Userid</form:label>
                         </td>
                         <td>
-                            <form:input path="userid" name="userid" id="userid" />
+                            <form:input path="userid" name="userid" id="userid" pattern=".{,40}" title="userid mustnot exceed 40 characters"/>
                         </td>
                     </tr>
                     <tr>
@@ -100,7 +100,7 @@ div {
                             <form:label path="password">Password</form:label>
                         </td>
                         <td>
-                            <form:password path="password" name="password" id="password" />
+                            <form:password path="password" name="password" id="password" pattern=".{,40}"  title="password mustnot exceed 40 characters"/>
                             <input type="checkbox" onclick="myFunction()"><font size="1px">ShowPassword</font>
                         </td>
                     </tr>
@@ -109,7 +109,7 @@ div {
                             <form:label path="firstname">FirstName</form:label>
                         </td>
                         <td>
-                            <form:input path="firstname" name="firstname" id="firstname" />
+                            <form:input path="firstname" name="firstname" id="firstname" pattern="[A-Za-z]{1,40}" title="firstname must contain only alphabets and mustnot exceed 40 characters"/>
                         </td>
                     </tr>
                     <tr>
@@ -117,15 +117,15 @@ div {
                             <form:label path="lastname">LastName</form:label>
                         </td>
                         <td>
-                            <form:input path="lastname" name="lastname" id="lastname" />
-                        </td>
+                            <form:input path="lastname" name="lastname" id="lastname" pattern="[A-Za-z]{1,40}" title="lastname must contain only alphabets and mustnot exceed 40 characters"/>
+                         </td>
                     </tr>
                     <tr>
                         <td>
                             <form:label path="email">Email</form:label>
                         </td>
                         <td>
-                            <form:input type="email" path="email" name="email" id="email" />
+                            <form:input type="email" path="email" name="email" id="email" pattern="[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="email must contain @ and domain name"/>   
                         </td>
                     </tr>
                     <tr>
@@ -133,8 +133,8 @@ div {
                             <form:label path="desig">Designation</form:label>
                         </td>
                         <td>
-                            <form:input path="desig" name="desig" id="desig" />
-                        </td>
+                            <form:input path="desig" name="desig" id="desig"  pattern="[A-Za-z]{1,40}" title="designation must contain only alphabets and mustnot exceed 40 characters"/>
+                         </td>
                     </tr>
                     <tr>
                         <td>
@@ -160,7 +160,7 @@ div {
                 </table>
             </form:form>
             </div>
-            <table align="center">
+            <table >
  <tr>
  <td style="font-style: italic; color: red;">${message}</td>
  </tr>
