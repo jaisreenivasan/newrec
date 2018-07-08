@@ -92,7 +92,7 @@ div {
                             <form:label path="userid">Userid</form:label>
                         </td>
                         <td>
-                            <form:input path="userid" name="userid" id="userid" pattern=".{,40}" title="userid mustnot exceed 40 characters"/>
+                            <form:input path="userid" name="userid" id="userid" pattern=".{1,40}" title="userid mustnot exceed 40 characters"/>
                         </td>
                     </tr>
                     <tr>
@@ -100,7 +100,7 @@ div {
                             <form:label path="password">Password</form:label>
                         </td>
                         <td>
-                            <form:password path="password" name="password" id="password" pattern=".{,40}"  title="password mustnot exceed 40 characters"/>
+                            <form:password path="password" name="password" id="password" pattern=".{1,40}"  title="password mustnot exceed 40 characters"/>
                             <input type="checkbox" onclick="myFunction()"><font size="1px">ShowPassword</font>
                         </td>
                     </tr>
