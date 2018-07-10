@@ -41,7 +41,7 @@
 <COLGROUP>
 <COL><COL align="char" char=".">
 <THEAD>
-<TR><TH>FirstName <TH>LastName <TH>Phone <TH>Designation <TH>Email
+<TR><TH>FirstName <TH>LastName  <TH>Designation <TH>Phone<TH>Email
 <TBODY>
 <c:forEach items="${lists}" var="lists">
 <TR><TD>${lists.getFirstname()}<TD>${lists.getLastname()}<TD>${lists.getDesig()}<TD>${lists.getPhone()}<TD>${lists.getEmail()}
