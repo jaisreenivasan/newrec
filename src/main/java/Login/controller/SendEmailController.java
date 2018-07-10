@@ -1,4 +1,4 @@
-package Login.controller;
+/*package Login.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,4 +39,4 @@ public class SendEmailController {
         // forwards to the view named "Result"
         return "Result";
     }
-}
+}*/

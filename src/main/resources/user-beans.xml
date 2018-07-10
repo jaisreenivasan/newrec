@@ -17,7 +17,7 @@
         <property name="username" ><value>${username}</value></property>
         <property name="password"> <value>${password}</value></property>
     </bean>
-    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+  <!--  <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
         <property name="host" value="gmail-smtp-in.l.google.com" />
         <property name="port" value="25" />
         <property name="javaMailProperties">
@@ -35,5 +35,5 @@
                 <prop key="java.lang.Exception">Error</prop>
             </props>
         </property>
-    </bean>  
+    </bean>  -->
 </beans>
