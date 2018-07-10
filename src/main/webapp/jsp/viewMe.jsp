@@ -38,7 +38,7 @@
 	   </script>
 	   <style>
 	   div {
-    width: 350px;
+    width: 400px;
     border: 1px solid green;
     padding: 25px;
     margin-left: 250px;
@@ -65,8 +65,9 @@
 <input type="checkbox" onclick="myFunction()"><font size="1px">ShowPassword</font>
 </td>
 </tr>
-<tr align="center">
-                        <td>
+<tr>
+<td></td>
+                        <td align="left">
                             <form:button id="login" name="login" onClick="alertMessage()">View Employees</form:button>
                         </td>
                     </tr>

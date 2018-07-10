@@ -33,6 +33,14 @@
                 <td><br><a href="view"><button style="height:50px;width:200px"><font color="purple" face="Arial">View details of all employees</font></button></a>
                 </td>
                 </tr>
+                <tr>
+				 </table>
+				<!--   <table align="center">
+                <td><br>
+				 <a href="/Login/jsp/EmailForm.jsp"><button  style="height:50px;width:400px"><font color="indigo" face="Arial">SendEmail</font></button></a>
+                </td>
+                </tr>-->
+                
             
         </table>
     </body>

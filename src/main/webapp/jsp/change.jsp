@@ -25,7 +25,24 @@
 		    event.returnValue = false;
 	   return false;
 	   }
+	   if (document.getElementById("newPassword").value == ""){
+		   alert ( "Please enter new password." );
+		   if(event.preventDefault)
+			    event.preventDefault();
+			else
+			    event.returnValue = false;
+		   return false;
+		   }
+	   if (document.getElementById("password").value == document.getElementById("newPassword").value){
+	   	   alert ( "old and new passwords cant be same" );
+	   	   if(event.preventDefault)
+	   		    event.preventDefault();
+	   		else
+	   		    event.returnValue = false;
+	   	   return false;
+	   	   }
      }
+       
         function myFunction() {
             var x = document.getElementById("password");
             if (x.type === "password") {
@@ -34,7 +51,7 @@
                 x.type = "password";
             }
         }
-        function myFunction() {
+        function myFunction1() {
             var x = document.getElementById("newPassword");
             if (x.type === "password") {
                 x.type = "text";
@@ -45,7 +62,7 @@
 	   </script>
 	   <style>
 	   div {
-    width: 350px;
+    width: 450px;
     border: 1px solid green;
     padding: 25px;
     margin-left: 250px;
@@ -75,17 +92,18 @@
                     <tr>
                         <td>
                             <form:label path="newPassword">NewPassword:</form:label>
-                            <input type="checkbox" onclick="myFunction1()"><font size="1px">ShowPassword</font>
                         </td>
                         <td>
-                            <form:password path="newPassword" name="newPassword" id="newPassword"  pattern=".{,40}"  title="password mustnot exceed 40 characters"/>
-                        </td>
+                            <form:password path="newPassword" name="newPassword" id="newPassword"  pattern=".{1,40}"  title="password mustnot exceed 40 characters"/>
+                 			
+                            <input type="checkbox" onclick="myFunction1()"><font size="1px">ShowPassword</font>
+                             </td>
                     </tr>
                    
                     <tr>
                         <td></td>
                         <td align="left">
-                            <form:button id="change" name="change" onClick="alertMessage()">Change</form:button>
+                            <form:button id="change" name="change" onClick="alertMessage();">Change</form:button>
                         </td>
                     </tr>
                     <tr></tr>

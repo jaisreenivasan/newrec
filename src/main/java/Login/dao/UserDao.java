@@ -9,6 +9,5 @@ public interface UserDao {
   boolean deleteUser(Login login);
   User validateUser(Login login);
   User validateUser(Change change);
-  
   List<User> viewemployees(Login login);
 }

@@ -12,7 +12,7 @@ public class User extends UserDaoImpl{
 	  private String phone;
 	  public String printme()
 	    {String sing;
-	    sing="* "+"FirstName:"+this.getFirstname()+" |LastName:"+this.getLastname()+" |Phone:"+this.getPhone()+" |Designation:"+this.getDesig()+" |Email:"+this.getEmail();
+	    sing="\n|"+"FirstName:"+this.getFirstname()+"\n|LastName:"+this.getLastname()+"\n|Phone:"+this.getPhone()+"\n|Designation:"+this.getDesig()+"\n|Email:"+this.getEmail();
 	    return sing;
 	    }
 	  public String getUserid() {
